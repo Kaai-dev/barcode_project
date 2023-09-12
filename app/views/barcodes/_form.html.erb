@@ -1,0 +1,32 @@
+<%= form_with(model: barcode) do |form| %>
+  <% if barcode.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(barcode.errors.count, "error") %> prohibited this barcode from being saved:</h2>
+
+      <ul>
+        <% barcode.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :code, style: "display: block" %>
+    <%= form.text_field :code %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :been_set, style: "display: block" %>
+    <%= form.check_box :been_set %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

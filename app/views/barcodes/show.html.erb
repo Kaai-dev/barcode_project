@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @barcode %>
+
+<div>
+  <%= link_to "Edit this barcode", edit_barcode_path(@barcode) %> |
+  <%= link_to "Back to barcodes", barcodes_path %>
+
+  <%= button_to "Destroy this barcode", @barcode, method: :delete %>
+</div>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Barcodes</h1>
+
+<div id="barcodes">
+  <% @barcodes.each do |barcode| %>
+    <%= render barcode %>
+    <p>
+      <%= link_to "Show this barcode", barcode %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New barcode", new_barcode_path %>
